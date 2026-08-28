@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCL 2026/27 — Manchester United Tracker</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Manchester United · UCL 2026/27</h1>
+      <p class="sub">League phase · single 36-team table (Swiss model)</p>
+      <div id="summary" class="summary"></div>
+    </header>
+    <main>
+      <section class="card">
+        <h2>League Phase — 8 fixtures</h2>
+        <p class="hint">Enter scores as <code>Utd-Opp</code> (e.g. <code>2-0</code>). Blank = not played.</p>
+        <table id="fixtures">
+          <thead>
+            <tr><th>MW</th><th>Date</th><th>Opponent</th><th>Pot</th><th>Venue</th><th>Score</th><th>Result</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Knockout Phase</h2>
+        <div id="knockout" class="knockout"></div>
+      </section>
+      <section class="card">
+        <h2>Qualification bands (36-team table)</h2>
+        <ul class="legend">
+          <li><span class="badge auto">AUTO</span> 1st–8th → direct to Round of 16</li>
+          <li><span class="badge playoff">PLAYOFF</span> 9th–24th → two-legged play-off</li>
+          <li><span class="badge eliminated">OUT</span> 25th–36th → eliminated</li>
+        </ul>
+        <p class="note">Exact cut line depends on the live 36-team table after each matchday; bands shown are points-based estimates (top-8 ≈ 15+ pts, playoff floor ≈ 8 pts).</p>
+      </section>
+    </main>
+    <footer>
+      <p>Data: real 2026/27 draw (Monaco, 27 Aug 2026). Update scores in <code>src/data/ucl2026.js</code> or via the inputs above.</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
